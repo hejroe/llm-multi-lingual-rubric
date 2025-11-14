@@ -1,0 +1,23 @@
+model_identifier,domain,DE,EN,ES,DE_Drift_Pts,ES_Drift_Pts
+deepseek-r1:8b,Factual Accuracy,53.60,-35.00,0.73,-88.60,-35.73
+deepseek-r1:8b,Procedural Reasoning,-91.99,-100.00,-92.44,-8.01,-7.56
+falcon3:10b,Factual Accuracy,-31.20,64.00,-35.04,95.20,99.04
+falcon3:10b,Procedural Reasoning,-31.09,75.50,-69.77,106.59,145.27
+gemma3:12b,Factual Accuracy,-24.80,82.67,-32.85,107.47,115.51
+gemma3:12b,Procedural Reasoning,-88.46,84.00,-84.01,172.46,168.01
+gemma3n:e4b,Factual Accuracy,-23.20,85.33,-35.77,108.53,121.10
+gemma3n:e4b,Procedural Reasoning,-87.82,84.00,-84.30,171.82,168.30
+gpt-oss:20b,Factual Accuracy,-10.40,72.00,-24.09,82.40,96.09
+gpt-oss:20b,Procedural Reasoning,-90.38,76.50,-85.47,166.88,161.97
+granite3.3:8b,Factual Accuracy,-8.80,84.00,-28.47,92.80,112.47
+granite3.3:8b,Procedural Reasoning,-92.31,81.50,-89.53,173.81,171.03
+llama3.1:8b,Factual Accuracy,-23.20,81.33,-37.23,104.53,118.56
+llama3.1:8b,Procedural Reasoning,-90.38,78.75,-89.24,169.13,167.99
+llama3.2:3b,Factual Accuracy,-26.40,77.33,-32.85,103.73,110.18
+llama3.2:3b,Procedural Reasoning,-91.67,78.75,-87.21,170.42,165.96
+llama3:8b,Factual Accuracy,-0.80,81.33,-27.01,82.13,108.34
+llama3:8b,Procedural Reasoning,-39.74,73.25,-83.43,112.99,156.68
+phi4:14b,Factual Accuracy,-20.00,89.33,-32.85,109.33,122.18
+phi4:14b,Procedural Reasoning,-94.23,82.75,-93.02,176.98,175.77
+qwen3:8b,Factual Accuracy,96.00,96.00,92.70,0.00,3.30
+qwen3:8b,Procedural Reasoning,73.88,77.25,78.20,3.37,-0.95

@@ -1,0 +1,16 @@
+# requirements.txt
+
+# For running the experiments
+requests
+tqdm
+
+# For translation and similarity scoring
+deep-translator
+sentence-transformers
+
+# For data analysis and scoring
+pandas
+
+# For data visualisation
+matplotlib
+seaborn

@@ -1,0 +1,28 @@
+# .gitignore (Aimed at Open Science)
+
+# --- Files to IGNORE ---
+
+# Python virtual environment (Always ignore this)
+venv/
+
+# Old Backup Files
+BACKUP_FILES/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
