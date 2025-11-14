@@ -1,4 +1,4 @@
-# A Cross-Lingual Study in LLM Factual Accuracy and Procedural Reasoning
+# The Leaderboard Illusion: A Risk Analysis of Performance Degradation in Multilingual Large Language Models
 
 This repository contains the complete code, data, and methodology for a research study into the cross-lingual performance consistency of Large Language Models (LLMs). The primary goal of this work is to quantify "performance drift" in a model's foundational capabilities when tested in different languages.
 
@@ -19,30 +19,36 @@ Our findings demonstrate that high performance on English-centric benchmarks is 
 
 ## Abstract
 
-The global deployment of Large Language Models necessitates robust, evidence-based assurance of their performance across diverse linguistic contexts. This study investigates a critical and under-examined issue: the consistency of a model's foundational competence in Factual Accuracy and Procedural Reasoning when tested in UK English (EN), German (DE), and Spanish (ES). We introduce a novel, fully automated pipeline, including a "Round-Trip Translation" quality gate to ensure translational equivalence and a "Hybrid Automated Scoring" protocol to objectively evaluate model reasoning. Our results provide empirical evidence of significant "performance drift," showing that a model's reliability can degrade substantially in non-English languages. We find that procedural reasoning is significantly more brittle to linguistic shifts than factual recall. These findings carry a stark warning for any multicultural nation or global organisation: relying on monolingual benchmarks is insufficient and can mask critical performance deficits, leading to the deployment of unreliable and potentially inequitable AI systems.
+The selection of Large Language Models (LLMs) for deployment in enterprise and public sector applications is often guided by performance on English-centric benchmarks. This paper challenges the validity of this approach through a systematic, cross-lingual risk analysis of model reliability. We evaluate eleven prominent open-source LLMs, all runnable on consumer-grade hardware, on a corpus derived from the established MMLU and GSM8K benchmarks. Our fully automated methodology quantifies "performance drift" across UK English (EN), German (DE), and Spanish (ES), employing a novel Hybrid Automated Scoring protocol that uses semantic similarity to objectively assess procedural reasoning against a ground truth.
+Our findings reveal a significant "leaderboard illusion": high performance in English is a dangerously poor predictor of a model's capabilities in other languages. We provide quantitative evidence that the top-performing model in our English baseline exhibited the most catastrophic performance degradation in non-English tests, with its normalized score collapsing by over 145 points into negative territory. Furthermore, we demonstrate that this performance drift is not uniform; complex procedural reasoning is significantly more brittle to linguistic shifts than simple factual recall.
+Critically, we analyse not just if a model fails, but how it fails. The data reveals distinct "safety fingerprints," where a model's propensity to hallucinate, guess, or honestly admit ignorance changes dramatically with language. This study concludes that the uncritical deployment of LLMs based on monolingual metrics is a high-risk strategy that can lead to the propagation of misinformation and the delivery of inequitable, unreliable services. The accessible methodology presented here offers a necessary, data-driven framework for conducting the essential due diligence required for the safe and responsible use of AI in a multilingual world.
+
 
 ---
 
 ## Repository Structure
-Multi-Ling-Rubric/
+```bash
+llm-multi-lingual-Rubric/
 │
+├── analysis_outputs # Output files from analyse_results.py
+├── data/ # Core data assets
+│ └── master_corpus.tsv # The human-editable master list of 350 questions
+├── experimental_results # Output from run_experiments.py
 ├── .gitignore
+├── LICENSE
+├── papers/ # Final research paper
+│ └── cross_lingual_study.pdf
 ├── README.md
-│
 ├── requirements.txt # Python dependencies
-│
 ├── src/ # All Python source code
 │ ├── build_corpus.py # Generates the final JSONL corpus from the master TSV
 │ ├── translate_corpus.py # Creates and validates multilingual question files
 │ ├── run_experiments.py # Executes the tests against the Ollama API
 │ ├── score_results.py # Applies the hybrid automated scoring logic
 │ └── analyse_results.py # Generates all final tables and visualizations
-│
-├── data/ # Core data assets
-│ └── master_corpus.tsv # The human-editable master list of 350 questions
-│
-└── paper/ # Final research paper
-└── cross_lingual_study.pdf
+├── translation_outputs
+  └── questions_de_....JSONL, questions_es_....JSONL and translation_log....txt
+```
 
 
 ---
@@ -66,7 +72,7 @@ This project uses Python 3.8+ and `venv` for dependency management.
 1.  **Clone the repository:**
     ```bash
     git clone [URL_to_your_repo]
-    cd Multi-Ling-Rubric
+    cd llm-multi-lingual-rubric
     ```
 
 2.  **Create and activate a Python virtual environment:**
@@ -106,7 +112,7 @@ To run the entire pipeline from start to finish, execute the scripts in the `src
     ```bash
     python src/run_experiments.py
     ```
-    *This is a time-consuming step.*
+    *This is a potentially time-consuming step.*
 
 4.  **Score the raw results:**
     ```bash
@@ -124,4 +130,4 @@ To run the entire pipeline from start to finish, execute the scripts in the `src
 ## Citing This Work
 
 If you use this methodology or data in your research, please cite it as follows:
-Hejroe. (2025). A Cross-Lingual Study in LLM Factual Accuracy and Procedural Reasoning. GitHub Repository. https://github.com/hejroe/Multi-Ling-Rubric
+Hejroe. (2025). The Leaderboard Illusion: A Risk Analysis of Performance Degradation in Multilingual Large Language Models. GitHub Repository. https://github.com/hejroe/Multi-Ling-Rubric
