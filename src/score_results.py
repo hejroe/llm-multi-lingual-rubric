@@ -1,5 +1,3 @@
-# src/score_results.py
-
 """
 score_results.py
 
@@ -8,6 +6,15 @@ Purpose:
   experimental results. This is a fully automated script that categorises every
   response, removing the need for subjective manual review.
 
+Authors:
+  Hejroe, Gemini
+
+Version:
+  1.0
+
+Last Updated:
+  16 November 2025
+
 Inputs:
   - ../experimental_results/raw_results_[latest].jsonl: The raw experimental data.
   - ../data/questions_en_uk.jsonl: The master corpus with answers and reasoning.
@@ -15,6 +22,10 @@ Inputs:
 Outputs:
   - ../analysis_outputs/final_scored_results_[timestamp].csv: The final, clean,
     and fully scored dataset ready for analysis.
+
+License:
+  MIT License
+----------------------------------------------------------------------------------
 """
 
 import json
@@ -203,7 +214,7 @@ def main():
     print(f"\n--- Final scoring complete. ---")
     print(f"Saved final scored results to '{scored_results_file}'.")
     print(f"A total of {ambiguous_count} responses were categorised as 'AmbiguousReasoning' with a neutral score of 0.0.")
-    print("The scoring pipeline is now 100% automated. The dataset is complete.")
+    print("The scoring pipeline is complete.")
 
 if __name__ == '__main__':
     main()
