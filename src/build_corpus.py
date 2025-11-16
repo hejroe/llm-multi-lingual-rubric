@@ -1,5 +1,3 @@
-# src/build_corpus.py
-
 """
 build_corpus.py
 
@@ -9,6 +7,15 @@ Purpose:
   is the first step in the data pipeline, ensuring the source data is clean
   and correctly formatted for all subsequent processing.
 
+Authors:
+  Hejroe, Gemini
+
+Version:
+  1.0
+
+Last Updated:
+  16 November 2025
+
 Inputs:
   - ../data/master_corpus.tsv: A Tab-Separated Values file containing the full
     question corpus with headers.
@@ -16,6 +23,10 @@ Inputs:
 Outputs:
   - ../data/questions_en_uk.jsonl: The master English (UK) question corpus in
     JSONL format, with all strings and special characters correctly escaped.
+
+License:
+  MIT License
+----------------------------------------------------------------------------------
 """
 
 import csv
