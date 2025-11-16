@@ -71,7 +71,7 @@ This project uses Python 3.8+ and `venv` for dependency management.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [URL_to_your_repo]
+    git clone https://github.com/hejroe/llm-multi-lingual-rubric
     cd llm-multi-lingual-rubric
     ```
 
