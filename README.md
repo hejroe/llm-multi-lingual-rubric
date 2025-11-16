@@ -37,7 +37,7 @@ llm-multi-lingual-Rubric/
 ├── .gitignore
 ├── LICENSE
 ├── papers/ # Final research paper
-│ └── cross_lingual_study.pdf
+│ └── multi-lingual-rubric.pdf
 ├── README.md
 ├── requirements.txt # Python dependencies
 ├── src/ # All Python source code
