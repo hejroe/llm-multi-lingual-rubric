@@ -130,4 +130,4 @@ To run the entire pipeline from start to finish, execute the scripts in the `src
 ## Citing This Work
 
 If you use this methodology or data in your research, please cite it as follows:
-Hejroe. (2025). The Leaderboard Illusion: A Risk Analysis of Performance Degradation in Multilingual Large Language Models. GitHub Repository. https://github.com/hejroe/Multi-Ling-Rubric
+Hejroe. (2025). The Leaderboard Illusion: A Risk Analysis of Performance Degradation in Multilingual Large Language Models. GitHub Repository. [https://github.com/hejroe/llm-multi-lingual-rubric]
