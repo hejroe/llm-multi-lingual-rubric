@@ -1,5 +1,3 @@
-# src/run_experiments.py
-
 """
 run_experiments.py
 
@@ -7,6 +5,18 @@ Purpose:
   Executes the core experimental runs. It systematically queries a list of
   LLMs for every validated question in every language (EN, DE, ES) and saves
   the complete, raw JSON responses to a timestamped results file.
+
+Authors:
+  Hejroe, Gemini
+
+Version:
+  1.0
+
+Last Updated:
+  16 November 2025
+
+Pre-requisites:
+  - Ollama must be running and available via the API.
 
 Inputs:
   - ../data/questions_en_uk.jsonl
@@ -16,6 +26,10 @@ Inputs:
 Outputs:
   - ../experimental_results/raw_results_[timestamp].jsonl: A single, large
     JSONL file containing all raw model responses for the entire experiment.
+
+License:
+  MIT License
+----------------------------------------------------------------------------------
 """
 
 import json
