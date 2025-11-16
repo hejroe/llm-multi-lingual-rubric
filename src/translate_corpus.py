@@ -1,5 +1,3 @@
-# src/translate_corpus.py
-
 """
 translate_corpus.py
 
@@ -9,6 +7,18 @@ Purpose:
   gate, using semantic similarity to ensure a high degree of translational
   fidelity.
 
+Authors:
+  Hejroe, Gemini
+
+Version:
+  1.0
+
+Last Updated:
+  16 November 2025
+
+Pre-requisites:
+  - An internet connect is required for the translation.
+
 Inputs:
   - ../data/questions_en_uk.jsonl: The master English (UK) corpus.
 
@@ -17,6 +27,10 @@ Outputs:
     translated question files for each target language.
   - ../translation_outputs/translation_log_[timestamp].txt: A simple log file
     detailing the Pass/Fail status for each question's translation.
+
+License:
+  MIT License
+----------------------------------------------------------------------------------
 """
 
 import json
